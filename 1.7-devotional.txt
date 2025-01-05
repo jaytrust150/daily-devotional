@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verses on Trust and Faith</title>
+</head>
+<body>
+
+  <h1>Verses on Trust and Faith</h1>
+
+  <p>
+    "Trust in the LORD with all your heart And do not lean on your own understanding." - Pro 3:5
+  </p>
+
+  <p>
+    "Though He slay me, I will hope in Him. Nevertheless I will argue my ways before Him." - Job 13:15
+  </p>
+
+</body>
+</html>
