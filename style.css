@@ -312,3 +312,317 @@ button:active {
     font-size: 1em; /* Reset font size for month, day, and year */
   }
 }
+/* --- General Styles --- */
+
+body {
+  font-family: 'Roboto Slab', serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h1 .daily {
+  color: #007bff;
+}
+
+h1 .devotional {
+  color: #ffc107;
+}
+
+
+/* --- Top Bar --- */
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* --- Buttons --- */
+
+button,
+.top-buttons a {
+  color: white;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Specific button colors */
+#shareButton,
+#shareSelected,
+#shareSelectedTop {
+  background-color: #3b5998;
+}
+
+#audioButton {
+  background-color: #ffc107;
+}
+
+#bibleAppButton,
+#dailyDevotionalButton {
+  background-color: #007bff;
+}
+
+#darkModeToggle {
+  background-color: #6c757d;
+}
+
+#decreaseFont,
+#increaseFont {
+  background-color: #28a745;
+}
+
+#prevDevotional,
+#nextDevotional,
+#prevChapter,
+#nextChapter,
+#prevChapterTop,
+#nextChapterTop {
+  background-color: #5cb85c;
+}
+
+#podcastsButton {
+  background-color: orange;
+}
+
+button:hover,
+.top-buttons a:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* --- Verse Display --- */
+
+#answerDisplay {
+  margin-top: 20px;
+  font-size: 1em;
+  line-height: 1.8;
+}
+
+/* --- Navigation --- */
+
+.chapter-navigation {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.chapter-navigation button {
+  flex: 1 0 150px;
+}
+
+/* --- Top Buttons --- */
+
+.top-buttons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.top-buttons:nth-child(2) {
+  /* Target the second .top-buttons div */
+  justify-content: flex-end;
+  /* Right-align the Audio button */
+  margin-left: auto;
+  /* Push the button to the far right */
+}
+
+.top-buttons>div {
+  display: flex;
+  align-items: center;
+}
+
+.top-buttons .font-buttons {
+  margin-left: 20px;
+}
+
+.top-buttons div button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  font-size: 1em;
+}
+
+#welcomeMessage {
+  font-size: 0.9em;
+  margin: 0 20px;
+}
+
+/* --- Date Pill --- */
+
+.date-pill {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-weight: bold;
+  font-size: 1.1em; /* Increased font size */
+}
+
+.date-pill select {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  padding: 0;
+  margin: 0 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 1.1em; /* Increased font size for month and day */
+}
+
+#yearDisplay {
+  font-size: 1.1em; /* Match the font size of the month and day */
+}
+
+/* --- Search Container --- */
+
+.search-container {
+  display: flex;
+  align-items: center; /* Vertically align items to the center */
+  width: 100%; 
+  justify-content: space-between; 
+}
+
+.search-container input[type="text"] {
+  flex-grow: 1; 
+  width: auto;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px; 
+}
+
+.search-container button {
+  background-color: #ffc107; /* Same color as the Audio button */
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-end; /* Align the button to the bottom of the container */
+}
+
+/* --- Dark Mode --- */
+
+.dark-mode {
+  background-color: #222;
+  color: #eee;
+}
+
+.dark-mode .container {
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode h1 {
+  color: #eee;
+}
+
+.dark-mode button,
+.dark-mode .top-buttons a {
+  background-color: #555;
+}
+
+.dark-mode #shareButton,
+.dark-mode #shareSelected,
+.dark-mode #shareSelectedTop {
+  background-color: #2a3b55;
+}
+
+.dark-mode #audioButton,
+.dark-mode .search-container button { /* Add this line to target the search button */
+  background-color: #b38600;
+}
+
+.dark-mode #bibleAppButton,
+.dark-mode #dailyDevotionalButton {
+  background-color: #0056b3;
+}
+
+.dark-mode #darkModeToggle {
+  background-color: #555;
+}
+
+.dark-mode #decreaseFont,
+.dark-mode #increaseFont {
+  background-color: #1e7e34;
+}
+
+.dark-mode #prevDevotional,
+.dark-mode #nextDevotional,
+.dark-mode #prevChapter,
+.dark-mode #nextChapter,
+.dark-mode #prevChapterTop,
+.dark-mode #nextChapterTop {
+  background-color: #4cae4c;
+}
+
+.dark-mode #podcastsButton {
+  background-color: #b38600;
+}
+
+.dark-mode button:hover,
+.dark-mode .top-buttons a:hover {
+  opacity: 0.8;
+}
+
+.dark-mode #answerDisplay {
+  color: #ccc;
+}
+
+.dark-mode .date-pill {
+  background-color: #555;
+  /* Darker background for the pill */
+}
+
+.dark-mode .date-pill select {
+  color: #eee;
+  /* Light text color for select elements */
+}
+
+/* --- Responsiveness --- */
+
+@media (max-height: 400px) { /* Adjust the height value as needed */
+  .chapter-navigation button {
+    font-size: 0.8em; /* Reduce font size */
+    padding: 8px 10px; /* Reduce padding */
+  }
+
+  .date-pill { /* Added styles for the date pill */
+    font-size: 1em; /* Reset font size to default */
+  }
+
+  .date-pill select, #yearDisplay {
+    font-size: 1em; /* Reset font size for month, day, and year */
+  }
+}
