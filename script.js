@@ -34,33 +34,33 @@ function shareDevotional() {
   // --- Get the devotional text element ---
   const devotionalTextDiv = document.getElementById('devotionalText');
   
-  // Function to fetch and display the devotional
-  function displayDevotional() {
-    const formattedDate = getFormattedDate();
-    const filename = `devotionals/${formattedDate}-devotional.txt`;
-    fetch(filename)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok'); 
-        }
-        return response.text();
-      })
-      .then(text => {
-        if (text.trim() === '') {
-          devotionalTextDiv.innerHTML = `
-            <p>Edits in Progress</p>
-            <p>May God bless your heart for seeking Him!</p>
-            <p>Just say a prayer for today to Him! In Jesus' name, Amen!</p>
-          `;
-        } else {
-          devotionalTextDiv.innerHTML = text;
-        }
-      })
-      .catch(error => {
-        console.error('There has been a problem with your fetch operation:', error);
-        devotionalTextDiv.innerHTML = "<p>Error loading devotional.</p><p>Please try again later.</p>";
-      });
-  }
+// Function to fetch and display the devotional
+function displayDevotional() {
+  const formattedDate = getFormattedDate();
+  const filename = `${formattedDate}-devotional.txt`; // Updated to fetch from the main folder
+  fetch(filename)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok'); 
+      }
+      return response.text();
+    })
+    .then(text => {
+      if (text.trim() === '') {
+        devotionalTextDiv.innerHTML = `
+          <p>Edits in Progress</p>
+          <p>May God bless your heart for seeking Him!</p>
+          <p>Just say a prayer for today to Him! In Jesus' name, Amen!</p>
+        `;
+      } else {
+        devotionalTextDiv.innerHTML = text;
+      }
+    })
+    .catch(error => {
+      console.error('There has been a problem with your fetch operation:', error);
+      devotionalTextDiv.innerHTML = "<p>Error loading devotional.</p><p>Please try again later.</p>";
+    });
+}
   
   // Function to increment the day number
   function nextDay() {
