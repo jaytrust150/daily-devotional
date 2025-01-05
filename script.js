@@ -147,11 +147,20 @@ function displayDevotional() {
     });
   
     // Share via Facebook
-    const shareFacebook = document.querySelectorAll('.share-facebook'); 
-    shareFacebook.forEach(facebook => {
-      facebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://jaytrust150.github.io/bible-app/')}`;
-      facebook.target = '_blank';
-    });
+const shareFacebook = document.querySelectorAll('.share-facebook'); 
+shareFacebook.forEach(facebook => {
+  // Copy the devotional text to the clipboard
+  const contentToShare = devotionalTextDiv.textContent;
+  navigator.clipboard.writeText(contentToShare).then(() => {
+    console.log('Devotional text copied to clipboard');
+  }).catch(err => {
+    console.error('Could not copy text: ', err);
+  });
+
+  // Set the Facebook share link
+  facebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://jaytrust150.github.io/daily-devotional/')}`;
+  facebook.target = '_blank';
+});
   
     // Share via Instagram
     const shareInstagram = document.querySelectorAll('.share-instagram');
