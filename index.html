@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Devotional</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar"> 
+      <button id="bibleAppButton" aria-label="Go to Bible App">Bible App</button>
+      <h1><span class="daily">Daily</span> <span class="devotional">Devotional</span></h1>
+      <button id="darkModeToggle" aria-label="Toggle dark mode">Dark Mode</button> 
+    </div>
+
+    <div class="top-buttons"> 
+      <div class="date-pill">
+        <select id="monthSelect" aria-label="Select month">
+          <option value="1">Jan</option>
+          <option value="2">Feb</option>
+          <option value="3">Mar</option>
+          <option value="4">Apr</option>
+          <option value="5">May</option>
+          <option value="6">Jun</option>
+          <option value="7">Jul</option>
+          <option value="8">Aug</option>
+          <option value="9">Sep</option>
+          <option value="10">Oct</option>
+          <option value="11">Nov</option>
+          <option value="12">Dec</option>
+        </select>
+        /
+        <select id="daySelect" aria-label="Select day"></select>
+        /
+        <span id="yearDisplay" aria-label="Current year"></span>
+      </div>
+      <p id="welcomeMessage">Welcome, hope you are blessed by your reading today! In Jesus' name I pray. Amen!</p>
+      <div class="font-buttons">
+        <button id="decreaseFont" aria-label="Decrease font size">-</button>
+        <button id="increaseFont" aria-label="Increase font size">+</button>
+      </div>
+    </div>
+
+    <div class="top-buttons">
+      <button id="audioButton" aria-label="Read aloud">Audio</button> 
+    </div>
+
+    <nav aria-label="Main Navigation"> 
+      <div class="chapter-navigation"> 
+        <button id="podcastsButton" aria-label="Go to Podcasts">Podcasts</button> 
+        <button id="shareButton" aria-label="Share devotional">Share</button>
+        <button id="prevDevotional" aria-label="Go to previous day's devotional">Prior Day</button>
+        <button id="nextDevotional" aria-label="Go to next day's devotional">Next Day</button> 
+      </div>
+
+      <div class="share-options" style="display: none;">
+        <a href="#" class="share-facebook" aria-label="Share on Facebook">Facebook</a>
+        <a href="#" class="share-x" aria-label="Share on X">X</a>
+        <a href="#" class="share-instagram" aria-label="Share on Instagram">Instagram</a>
+        <a href="#" class="share-snapchat" aria-label="Share on Snapchat">Snapchat</a>
+        <a href="#" class="share-email" aria-label="Share via email">Email</a>
+        <a href="#" class="share-reddit" aria-label="Share on Reddit">Reddit</a>
+        <a href="#" class="share-google-docs" aria-label="Share on Google Docs">Google Docs</a>
+        <a href="#" class="share-text" aria-label="Share via text message">Text</a>
+      </div>    
+
+      <div id="devotionalText"></div> 
+
+      <div class="chapter-navigation"> 
+        <button id="podcastsButton" aria-label="Go to Podcasts">Podcasts</button> 
+        <button id="shareButton" aria-label="Share devotional">Share</button>
+        <button id="prevDevotional" aria-label="Go to previous day's devotional">Prior Day</button>
+        <button id="nextDevotional" aria-label="Go to next day's devotional">Next Day</button> 
+      </div>
+
+      <div class="share-options" style="display: none;">
+        <a href="#" class="share-facebook" aria-label="Share on Facebook">Facebook</a>
+        <a href="#" class="share-x" aria-label="Share on X">X</a>
+        <a href="#" class="share-instagram" aria-label="Share on Instagram">Instagram</a>
+        <a href="#" class="share-snapchat" aria-label="Share on Snapchat">Snapchat</a>
+        <a href="#" class="share-email" aria-label="Share via email">Email</a>
+        <a href="#" class="share-reddit" aria-label="Share on Reddit">Reddit</a>
+        <a href="#" class="share-google-docs" aria-label="Share on Google Docs">Google Docs</a>
+        <a href="#" class="share-text" aria-label="Share via text message">Text</a>
+      </div>
+    </nav>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search the Bible using the Bible App (e.g., Mark; John 3:16; Rom 8:28-31)">
+      <button id="searchButton" aria-label="Search">Search</button>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
